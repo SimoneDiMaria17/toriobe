@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Download\\backtorio\\backtorio.csproj": {}
+    "D:\\Download\\toriobe\\backtorio\\backtorio.csproj": {}
   },
   "projects": {
-    "D:\\Download\\backtorio\\backtorio.csproj": {
+    "D:\\Download\\toriobe\\backtorio\\backtorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Download\\backtorio\\backtorio.csproj",
+        "projectUniqueName": "D:\\Download\\toriobe\\backtorio\\backtorio.csproj",
         "projectName": "backtorio",
-        "projectPath": "D:\\Download\\backtorio\\backtorio.csproj",
+        "projectPath": "D:\\Download\\toriobe\\backtorio\\backtorio.csproj",
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
-        "outputPath": "D:\\Download\\backtorio\\obj\\",
+        "outputPath": "D:\\Download\\toriobe\\backtorio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
