@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backtorio", "backtorio.csproj", "{1841B600-400F-4DEF-BEFF-6C019F36B948}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1841B600-400F-4DEF-BEFF-6C019F36B948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1841B600-400F-4DEF-BEFF-6C019F36B948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1841B600-400F-4DEF-BEFF-6C019F36B948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1841B600-400F-4DEF-BEFF-6C019F36B948}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D74D3203-41C6-4BFC-ABD9-1E0665756E37}
+	EndGlobalSection
+EndGlobal
