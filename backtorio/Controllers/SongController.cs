@@ -143,7 +143,7 @@ public class SongController : Controller
     
     //create new song
     [HttpPost("AddNewSong/{songID}/{vote}")]
-    public async Task<IActionResult> AddNewSong(string songId,  int vote)
+    public async Task<IActionResult> AddNewSong(string songId,  List<string> vote)
     {
         try
         {
@@ -185,7 +185,7 @@ public class SongController : Controller
     
     //update a song
     [HttpPut("UpdateSong/{songID}/{vote}")]
-    public async Task<IActionResult> UpdateSong(string songID, int vote)
+    public async Task<IActionResult> UpdateSong(string songID, List<string> vote)
     {
         try
         {

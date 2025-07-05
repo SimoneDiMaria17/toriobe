@@ -12,8 +12,8 @@ public class Canzoni
     [BsonElement("songID"),BsonRepresentation(BsonType.String)]
     public string SongId { get; set; }
     
-    [BsonElement("vote"),BsonRepresentation(BsonType.Int32)]
-    public int Vote { get; set; }
+    [BsonElement("vote")]
+    public List<string> Vote { get; set; }
     
     [BsonElement("updated"),BsonRepresentation(BsonType.DateTime)]
     public DateTime Update { get; set; }
