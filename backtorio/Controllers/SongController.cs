@@ -9,58 +9,20 @@ namespace backtorio.Controllers;
 public class SongController : Controller
 {
     private readonly IMongoCollection<Canzoni> _canzoni;
+    private SpotifyController _spotify;
     public SongController(MongoDbService mds)
     {
         _canzoni = MongoDbService.Db.GetCollection<Canzoni>("Canzoni");
+        
     }
 
     #region Get Method
     
-    [HttpGet("GetAll")]
-    public async Task<OkObjectResult> GetAll()
-    {
-        try
-        {
-            var Canzoni = await _canzoni.Find(c => true).ToListAsync();
-            return Ok(Canzoni);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
+    
 
-    [HttpGet("GetUpdated")]
-    public async Task<OkObjectResult> GetUpdated()
-    {
-        try
-        {
-            var canzoni = await _canzoni.Find(c => true).SortByDescending(c=> c.Update).ToListAsync();
-            return Ok(canzoni);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-        
-    }
+    
 
-    [HttpGet("GetMostVoted")]
-    public async Task<OkObjectResult> GetMostVoted()
-    {
-        try
-        {
-             var canzoni = await _canzoni.Find(c => true).SortByDescending(c=>c.Vote).ToListAsync();
-             return Ok(canzoni);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
+    
     
     /*[HttpGet("FindByArtist/{artist}")]
     public async Task<OkObjectResult> FindByArtist(string artist)
@@ -142,8 +104,8 @@ public class SongController : Controller
     #region Post Method
     
     //create new song
-    [HttpPost("AddNewSong/{songID}/{vote}")]
-    public async Task<IActionResult> AddNewSong(string songId,  List<string> vote)
+    [HttpPost("AddNewSong/{songID}")]
+    public async Task<IActionResult> AddNewSong(string songId, [FromBody] List<string> vote)
     {
         try
         {
@@ -163,20 +125,7 @@ public class SongController : Controller
         }
     }
     
-    [HttpPost("AddsNewSongsFromJson")]
-    public async Task<IActionResult> AddsNewSongsFromJson([FromBody] Canzoni canzoni)
-    {
-        try
-        {
-            await _canzoni.InsertOneAsync(canzoni);
-            return CreatedAtAction(nameof(AddNewSong),new {Id= canzoni.id}, canzoni);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
+    
     
     #endregion
     
@@ -184,8 +133,8 @@ public class SongController : Controller
     //todo aggiustare
     
     //update a song
-    [HttpPut("UpdateSong/{songID}/{vote}")]
-    public async Task<IActionResult> UpdateSong(string songID, List<string> vote)
+    [HttpPut("UpdateSong/{songID}")]
+    public async Task<IActionResult> UpdateSong(string songID,   [FromBody] List<string> vote)
     {
         try
         {

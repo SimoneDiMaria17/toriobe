@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("backtorio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+143acdaa55721f2afac2c64b3d2768e729d92b14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d0a6f7c5923a4f0cca25ed859964bcd9041a367")]
 [assembly: System.Reflection.AssemblyProductAttribute("backtorio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("backtorio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
